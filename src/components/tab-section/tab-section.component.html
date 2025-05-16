@@ -1,0 +1,25 @@
+<div class="tabs-section">
+    <div class="tabs-scroll">
+        <button *ngFor="let tab of ['Описание', 'Характеристики', 'Отзывы', 'Условия']"
+                [class.active]="activeTab === tab.toLowerCase()"
+                (click)="setActiveTab(tab.toLowerCase())">
+            {{ tab }}
+        </button>
+    </div>
+    <div [ngSwitch]="activeTab" class="tab-content">
+        <div *ngSwitchCase="'описание'" class="description">
+            <div class="spec-table">
+                <div *ngFor="let item of data" class="spec-row">
+                    <div class="grey spec-name">{{ item.name }}</div>
+                    <div class="spec-value" [innerText]="item.value"></div>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'характеристики'">
+            <!-- Характеристики -->
+        </div>
+        <div *ngSwitchCase="'отзывы'">
+            <!-- Отзывы -->
+        </div>
+    </div>
+</div>

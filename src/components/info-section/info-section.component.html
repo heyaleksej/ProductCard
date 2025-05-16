@@ -1,0 +1,27 @@
+<div class="info-wrapper">
+    <div class="info-section">
+        <span class="header">Ключ комбинированный 27мм (Chrome vanadium) на держателе сатинированный 1/10 (ER-31027) ЭВРИКА</span>
+        <div class="logo">
+            <img src="assets/images/logo.jpg" alt="Logo">
+        </div>
+        <div class="details">
+            <div class="grey">Артикул: <span>ФТ-305.174</span>
+            </div>
+            <div class="grey">Код поставщика: <span>00000030692</span></div>
+        </div>
+    </div>
+
+    <div class="price-section">
+        <div class="price-info">
+            <div class="price">15 341,00 ₽</div>
+            <div class="bonus">
+                <img src="assets/icons/coin.svg" alt="Bonus">
+                + 20,79 баллов
+            </div>
+        </div>
+        <app-city-stock
+                *ngFor="let city of cities"
+                [city]="city">
+        </app-city-stock>
+    </div>
+</div>

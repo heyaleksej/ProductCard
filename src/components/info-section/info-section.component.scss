@@ -1,0 +1,59 @@
+.info-section {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+
+  .header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: $color-black-primary;
+    padding-right: 30px;
+    margin-bottom: 16px;
+  }
+
+  .details {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    div {
+      margin-top: 12px;
+      color: $color-black-secondary;
+
+      span {
+        color: $color-black-primary;
+      }
+    }
+  }
+}
+
+.info-wrapper {
+  padding: 0 16px;
+}
+
+.price-section {
+  .price-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 24px;
+
+    .price {
+      font-weight: 700;
+      font-size: 20px;
+      color: $color-black-primary;
+    }
+
+    .bonus {
+      gap: 8px;
+      display: flex;
+      align-items: center;
+      color: $color-success-primary;
+      font-weight: 700;
+    }
+  }
+}

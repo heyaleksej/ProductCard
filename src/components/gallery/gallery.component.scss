@@ -1,0 +1,61 @@
+.gallery-section {
+  position: relative;
+  height: 300px;
+  background: #F6F6F6;
+
+
+  .gallery-image {
+    padding: 65px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sticker{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+  }
+
+  .icon-button {
+    position: absolute;
+    top: 16px;
+    background: transparent;
+    border: none;
+
+    &.back-button {
+      left: 10px;
+    }
+
+    &.favorite-button {
+      right: 10px;
+    }
+  }
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+
+    div {
+      width: 24px;
+      height: 2px;
+      background: $color-divider;
+      border-radius: 1px;
+
+      &.active {
+        background: $color-brand-primary;
+      }
+    }
+  }
+}

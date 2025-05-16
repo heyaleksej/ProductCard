@@ -1,0 +1,42 @@
+<div class="city-stock">
+    <div class="city-info-wrapper">
+        <div class="city-info">
+      <span class="city-name">
+        {{ city.name }}
+          <img src="assets/icons/details.svg" alt="Details" />
+      </span>
+        </div>
+
+        <div *ngIf="!count; else counterTemplate">
+            <button (click)="increase()" class="cart-button">
+                В корзину
+                <img src="assets/icons/cart.svg" alt="Cart" />
+            </button>
+        </div>
+
+        <ng-template #counterTemplate>
+            <div class="counter">
+                <button (click)="decrease()">
+                    <img src="assets/icons/minus.svg" alt="<Minus>" />
+                </button>
+                <span>{{ count }}</span>
+                <button (click)="increase()">
+                    <img src="assets/icons/plus.svg" alt="Plus" />
+                </button>
+            </div>
+        </ng-template>
+    </div>
+
+    <div class="delivery-wrapper">
+    <span class="label">
+      В наличии:
+      <span class="value">{{ city.stock }} шт.</span>
+    </span>
+        <div class="label">
+            Дата поставки:
+            <span [ngClass]="{ 'value': true, 'green': city.isFastDelivery }">
+        {{ city.date }}
+      </span>
+        </div>
+    </div>
+</div>

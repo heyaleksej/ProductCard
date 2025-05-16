@@ -1,0 +1,71 @@
+.tab-content{
+  padding-top: 24px;
+  padding-right: 16px;
+}
+
+.tabs-section {
+  margin: 24px 0 24px 16px;
+  overflow: visible;
+  .tabs-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    button {
+      flex-shrink: 0;
+      padding: 12px 32px;
+      background: $color-gray-light;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      color: $color-black-secondary;
+
+
+      &.active {
+        background: $color-secondary;
+        color: $color-brand-primary;
+      }
+    }
+  }
+}
+
+.spec-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+
+  .spec-name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0;
+    width: 44%;
+  }
+
+  .spec-value {
+    white-space: pre-wrap;
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    color: $color-black-primary;
+  }
+}
